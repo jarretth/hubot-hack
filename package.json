@@ -1,0 +1,14 @@
+{
+  "name": "hubot-hack",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "hubot": "~2.3.2",
+    "hubot-scripts": "~2.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD"
+}
