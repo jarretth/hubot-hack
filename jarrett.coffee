@@ -40,7 +40,7 @@ module.exports = (robot) ->
 
 		<script type="text/javascript">
 		var width = 800;
-		var height = 300;
+		var height = 550;
 		var margin = 20;
 		var scalefactor = 60*1000;
 		var roomsmenu = d3.select("#rooms").on('change', function() { d3.select('#users').property('value',''); redraw(); });
@@ -96,7 +96,7 @@ module.exports = (robot) ->
      		yRules.attr("y", function(d) { return height-r(d);});
      		yRules.exit().remove();
 
-     		var xRules = chart.selectAll(".xrule").data(x.ticks(Math.ceil((maxtime-mintime)/60000)));
+     		var xRules = chart.selectAll(".xrule").data(x.ticks(Math.min(15,Math.ceil((maxtime-mintime)/60000))));
    			xRules.enter().append("text").attr("class", "xrule").attr("x", x).attr("y", height)
      		.attr("dy", -1*margin/2)
      		.attr("text-anchor", "middle")
